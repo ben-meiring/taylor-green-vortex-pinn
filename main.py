@@ -8,7 +8,7 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 # --- Physical parameters ---
 
-U0 = 1.0
+U0 = 1.2
 n = 1
 k = 2.0 * torch.pi * n
 nu = 0.6 / (2 * k**2)
@@ -87,7 +87,7 @@ def second_derivatives(first_grad, inputs, idx):
 model = MLP()
 opt = torch.optim.Adam(model.parameters(), lr=1e-3)
 
-for step in range(201):
+for step in range(20001):
     batch_size = 256
 
     x = torch.rand(batch_size, 1)
