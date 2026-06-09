@@ -109,7 +109,7 @@ The animation shows both the vorticity field and tracer particles advected by th
 Example output:
 
 ```text
-particle_arrows.mp4
+vortex_comparison.mp4
 ```
 
 ## Why this is interesting
@@ -172,18 +172,7 @@ During training, the script prints the total loss and the individual residual te
 After training, it saves the animation as:
 
 ```text
-particle_arrows.mp4
-```
-
-## File structure
-
-A minimal repository could look like:
-
-```text
-.
-├── taylor_green_pinn.py
-├── particle_arrows.mp4
-└── README.md
+vortex_comparison.mp4
 ```
 
 ## Notes
