@@ -1,6 +1,6 @@
 # Physics-Informed Neural Network for 2D Whirlpools
 
-Physics-informed neural network for the 2D Taylor-Green vortex, comparing a trained neural network to an analytic solution to the Navier-Stokes equation.
+Physics-informed neural network for the 2D Taylor-Green vortex, comparing a trained neural network to an analytic solution to the Navier-Stokes equation. Unlike supervised learning, a PINN can be trained without emperical data. It instead learns by minimizing the governing PDEs over the solution domain.
 
 ## Overview
 
@@ -30,7 +30,7 @@ We implement a physics-informed neural network (PINN) for the two-dimensional Ta
 ```
 <br>
 
-where $\nu$ is the kinematic viscosity, $\Omega$ is the spatial domain, and $[0,T]$ is the time interval over which the system is evolved.
+where $\nu$ is the kinematic viscosity, $\Omega$ is the spatial domain, and $[0,T]$ is the time interval over which the system is evolved.  This animation shows close qualitative agreement in both the velocity and vorticity fields.
 
 ## Results
 
@@ -191,93 +191,26 @@ k=2\pi n,
 
 where $4n^2$ gives the total number of vortices contained within the domain $\Omega$.
 
-## Output
-
-After training, the script generates a side-by-side animation comparing:
-
-* the PINN-learned vortex solution
-* the analytic Taylor-Green vortex solution
-
-The animation shows both the vorticity field and tracer particles advected by the corresponding velocity fields.
-
-Example output:
-
-```text
-vortex_comparison.mp4
-```
-
-## Why this is interesting
-
-This project is not just a supervised fit to known data. The neural network learns the solution by satisfying the structure of the PDE itself.
-
-Some notable features are:
-
-* joint learning of vorticity and velocity fields
-* autograd-based computation of PDE derivatives
-* enforcement of nonlinear vorticity transport
-* direct incompressibility constraint
-* periodic boundary conditions
-* comparison with an exact analytic solution
-* particle-transport visualization to test the learned flow dynamically
-
-The particle animation is especially useful because a model can produce a visually plausible vorticity field while still generating incorrect velocity-driven transport. Comparing tracer motion against the analytic solution gives a more physical test of the learned dynamics.
 
 ## Requirements
 
-The code uses:
-
-```text
-torch
-numpy
-matplotlib
-ffmpeg
-```
-
-To install the Python dependencies:
+Install the Python dependencies:
 
 ```bash
 pip install torch numpy matplotlib
 ```
 
-To save the animation as an MP4, `ffmpeg` must also be installed.
-
-On macOS:
+Install `ffmpeg` for MP4 output:
 
 ```bash
-brew install ffmpeg
+brew install ffmpeg       # macOS
+sudo apt install ffmpeg   # Ubuntu
 ```
 
-On Ubuntu:
+## Running
 
 ```bash
-sudo apt-get install ffmpeg
+python main.py
 ```
 
-## Running the code
-
-Run the script with:
-
-```bash
-python taylor_green_pinn.py
-```
-
-During training, the script prints the total loss and the individual residual terms used to monitor PDE, boundary, initial-condition, and gauge errors.
-
-After training, it saves the animation as:
-
-```text
-vortex_comparison.mp4
-```
-
-## Notes
-
-The current implementation is intentionally compact and self-contained. It is meant as a demonstration of how PINNs can be used to solve a fluid dynamics problem by enforcing physical constraints directly.
-
-Possible extensions include:
-
-* adding quantitative error plots versus the analytic solution
-* experimenting with different network architectures
-* comparing different activation functions
-* using a streamfunction formulation to enforce incompressibility automatically
-* training over longer time intervals
-* testing higher Reynolds number regimes
+The script prints the training losses and saves the comparison as `vortex_comparison.mp4`.
