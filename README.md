@@ -1,6 +1,6 @@
-# Physics-Informed Neural Network for 2D Whirlpools
+# Physics-Informed Neural Network for 2D Fluid Vortices
 
-Physics-informed neural network for the 2D Taylor-Green vortex, comparing a trained neural network to an analytic solution to the Navier-Stokes equation. Unlike supervised learning, a PINN can be trained without emperical data. It instead learns by minimizing the governing PDEs over the solution domain.
+Physics-informed neural network for the 2D Taylor-Green vortex, comparing a trained neural network to an analytic solution to the Navier-Stokes equations. Unlike supervised learning, a PINN can be trained without empirical data. It instead learns by minimizing the governing PDEs over the solution domain.
 
 ## Overview
 
@@ -30,7 +30,7 @@ We implement a physics-informed neural network (PINN) for the two-dimensional Ta
 ```
 <br>
 
-where $\nu$ is the kinematic viscosity, $\Omega$ is the spatial domain, and $[0,T]$ is the time interval over which the system is evolved.  This animation shows close qualitative agreement in both the velocity and vorticity fields.
+where $\nu$ is the kinematic viscosity, $\Omega$ is the spatial domain, and $[0,T]$ is the time interval over which the system is evolved.
 
 ## Results
 
