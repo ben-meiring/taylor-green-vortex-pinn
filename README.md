@@ -28,7 +28,9 @@ We implement a physics-informed neural network (PINN) for the two-dimensional Ta
 \,d^2x\,dt .
 ```
 
-This animation compares the velocity and vorticity fields predicted by the PINN against the analytic Taylor–Green solution.
+## Results
+
+The resulting flow is shown below. This animation compares the velocity and vorticity fields predicted by the PINN against the analytic Taylor–Green solution.
 
 <p align="center">
   <a href="vortex_comparison.mp4">
@@ -36,9 +38,7 @@ This animation compares the velocity and vorticity fields predicted by the PINN 
   </a>
 </p>
 
-<p align="center">
-  <em>The arrows represent the fluid velocity $\mathbf{u}$, while the colours represent the vorticity $\omega$, with red indicating positive vorticity and blue indicating negative vorticity. Click the animation to view the full MP4.</em>
-</p>
+*The arrows represent the fluid velocity $\mathbf{u}$, while the colours represent the vorticity $\omega$, with red indicating positive vorticity and blue indicating negative vorticity. Click the animation to view the full MP4.*
 
 ## Method
 
