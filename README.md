@@ -1,10 +1,34 @@
-# Physics-Informed Neural Network for the 2D Taylor-Green Vortex
+# Physics-Informed Neural Network for 2D Whirlpools
 
-Physics-informed neural network for the 2D Taylor-Green vortex, comparing a learned Navier-Stokes solution against the analytic flow.
+Physics-informed neural network for the 2D Taylor-Green vortex, comparing a trained neural network to an analytic solution to the Navier-Stokes equation.
 
 ## Overview
 
-We implement a physics-informed neural network (PINN) for the 2D Taylor-Green vortex. The model learns the time-dependent vorticity and velocity fields of an incompressible fluid by enforcing the governing PDEs directly, rather than training only on simulation data.
+We implement a physics-informed neural network (PINN) for the 2D Taylor-Green vortex. We train the network to model time-dependent vorticity and velocity fields of an incompressible fluid by minimizing a loss of the form
+
+```math
+\mathcal{L}_{\mathrm{EOM}}
+=
+\int_{\Omega\times[0,T]}
+\left[
+\left(
+\partial_t\omega
++u\,\partial_x\omega
++v\,\partial_y\omega
+-\nu\nabla^2\omega
+\right)^2
++
+\left(
+\omega-\partial_x v+\partial_y u
+\right)^2
++
+\left(
+\partial_xu+\partial_yv
+\right)^2
+\right]
+\,dx\,dy\,dt .
+```
+
 
 The learned solution is compared against the analytic Taylor-Green vortex solution, and the final output includes an MP4 animation showing the machine-learned flow side-by-side with the analytic solution.
 
