@@ -26,7 +26,7 @@ We implement a physics-informed neural network (PINN) for the two-dimensional Ta
 \right)^2
 \right]
 \,d^2x\,dt .
-
+```
 
 The learned solution is compared against the analytic Taylor-Green vortex solution, and the final output includes an MP4 animation showing the machine-learned flow side-by-side with the analytic solution.
 
