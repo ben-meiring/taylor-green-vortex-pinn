@@ -43,7 +43,7 @@ This animation compares the velocity and vorticity fields predicted by the PINN 
 </p>
 
 <p align="center">
-  <em>The arrows represent the fluid velocity <strong>u</strong>, while the colours represent the vorticity ω, with red indicating positive vorticity and blue indicating negative vorticity. Click the animation to view the full MP4.</em>
+  <em>The arrows represent the fluid velocity <strong>u</strong>, while the colours represent the vorticity ω, with red indicating positive vorticity and blue indicating negative vorticity. Click the animation to access an MP4 version.</em>
 </p>
 
 The network is trained over $t\in[0,1]$, while the animation extends to $t=2$, showing that the network can correctly extrapolate from its training regime.
