@@ -46,6 +46,8 @@ The resulting flow is shown below. This animation compares the velocity and vort
   <em>The arrows represent the fluid velocity <strong>u</strong>, while the colours represent the vorticity ω, with red indicating positive vorticity and blue indicating negative vorticity. Click the animation to view the full MP4.</em>
 </p>
 
+The network is trained over $t\in[0,1]$, while the animation extends to $t=2$, showing that the network correctly extrapolates from its training regime.
+
 ## Method
 
 The model is a fully connected neural network with four hidden layers of width 64 and sinusoidal activation functions. It maps each spacetime coordinate to the vorticity and velocity fields,
