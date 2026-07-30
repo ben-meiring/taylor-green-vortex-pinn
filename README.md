@@ -159,23 +159,37 @@ This fixes the spatially uniform velocity component that is not determined by th
 
 ## Analytic solution
 
-The analytic Taylor-Green solution used for comparison is
+The analytic Taylor–Green solution used for comparison is
 
-```text
-u(x, y, t) = U sin(kx) cos(ky) exp(-2 nu k^2 t)
-
-v(x, y, t) = -U cos(kx) sin(ky) exp(-2 nu k^2 t)
-
-w(x, y, t) = 2 U k sin(kx) sin(ky) exp(-2 nu k^2 t)
+```math
+\large
+\begin{aligned}
+u(x,y,t)
+&=
+U_0\sin(kx)\cos(ky)e^{-2\nu k^2t},
+\\[0.8em]
+v(x,y,t)
+&=
+-U_0\cos(kx)\sin(ky)e^{-2\nu k^2t},
+\\[0.8em]
+\omega(x,y,t)
+&=
+2U_0k\sin(kx)\sin(ky)e^{-2\nu k^2t}.
+\end{aligned}
 ```
 
-where
+<br>
 
-```text
-k = 2 pi n
+Here, $U_0$ is the initial velocity amplitude, $\nu$ is the kinematic viscosity, and the wavenumber is
+
+```math
+\large
+k=2\pi n,
 ```
 
-and `nu` is the viscosity.
+<br>
+
+where $4n^2$ gives the total number of vortices contained within the domain $\Omega$.
 
 ## Output
 
