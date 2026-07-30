@@ -34,7 +34,7 @@ where $\nu$ is the kinematic viscosity, $\Omega$ is the spatial domain, and $[0,
 
 ## Results
 
-The resulting flow is shown below. This animation compares the velocity and vorticity fields predicted by the PINN against the analytic Taylor–Green solution.
+This animation compares the velocity and vorticity fields predicted by the PINN against the analytic Taylor–Green solution.
 
 <p align="center">
   <a href="vortex_comparison.mp4">
