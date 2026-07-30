@@ -30,7 +30,17 @@ We implement a physics-informed neural network (PINN) for the two-dimensional Ta
 
 The learned solution is compared against the analytic Taylor-Green vortex solution, and the final output includes an MP4 animation showing the machine-learned flow side-by-side with the analytic solution.
 
-[![Taylor–Green vortex comparison](vortex_comparison.gif)](vortex_comparison.mp4)
+The animation compares the velocity and vorticity fields predicted by the PINN with the analytic Taylor–Green solution.
+
+<p align="center">
+  <a href="vortex_comparison.mp4">
+    <img src="vortex_comparison.gif" width="700" alt="PINN and analytic Taylor–Green vortex comparison">
+  </a>
+</p>
+
+<p align="center">
+  <em>The arrows represent the fluid velocity \(\mathbf{u}\), while the colours represent the vorticity \(\omega\), with red indicating positive vorticity and blue indicating negative vorticity. Click the animation to view the full MP4.</em>
+</p>
 
 *Click the animation to view or download the full MP4.*
 
