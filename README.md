@@ -30,6 +30,10 @@ We implement a physics-informed neural network (PINN) for the two-dimensional Ta
 
 The learned solution is compared against the analytic Taylor-Green vortex solution, and the final output includes an MP4 animation showing the machine-learned flow side-by-side with the analytic solution.
 
+[![Taylor–Green vortex comparison](vortex_comparison.gif)](vortex_comparison.mp4)
+
+*Click the animation to view or download the full MP4.*
+
 ## Method
 
 The model is a fully connected neural network with sinusoidal activations. It takes spacetime coordinates as input,
