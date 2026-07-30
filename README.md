@@ -13,20 +13,19 @@ We implement a physics-informed neural network (PINN) for the 2D Taylor-Green vo
 \left[
 \left(
 \partial_t\omega
-+u\,\partial_x\omega
-+v\,\partial_y\omega
++\mathbf{u}\cdot\nabla\omega
 -\nu\nabla^2\omega
 \right)^2
 +
 \left(
-\omega-\partial_x v+\partial_y u
+\omega-\nabla\times\mathbf{u}
 \right)^2
 +
 \left(
-\partial_xu+\partial_yv
+\nabla\cdot\mathbf{u}
 \right)^2
 \right]
-\,dx\,dy\,dt .
+\,d^2x\,dt .
 ```
 
 
