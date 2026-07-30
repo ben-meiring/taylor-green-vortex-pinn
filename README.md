@@ -7,11 +7,9 @@ Physics-informed neural network for the 2D Taylor-Green vortex, comparing a trai
 We implement a physics-informed neural network (PINN) for the two-dimensional Taylor–Green vortex. We train the network to model the time-dependent velocity field $\mathbf{u}=(u,v)$ and vorticity $\omega=\partial_xv-\partial_yu$ of an incompressible fluid. The loss is given by the integral of the squared PDE residuals,
 
 ```math
-\large
-\displaystyle
 \mathcal{L}_{\mathrm{EOM}}
 =
-\int_{\Omega\times[0,T]}
+\mathop{\Large\int}\limits_{\Omega\times[0,T]}
 \left[
 \left(
 \partial_t\omega
