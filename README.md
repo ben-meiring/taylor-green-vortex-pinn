@@ -28,6 +28,8 @@ We implement a physics-informed neural network (PINN) for the two-dimensional Ta
 \,d^2x\,dt .
 ```
 
+where $\nu$ is the kinematic viscosity, $\Omega$ is the spatial domain, and $[0,T]$ is the time interval over which the system is evolved.
+
 ## Results
 
 The resulting flow is shown below. This animation compares the velocity and vorticity fields predicted by the PINN against the analytic Taylor–Green solution.
